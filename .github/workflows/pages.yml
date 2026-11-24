@@ -1,7 +1,6 @@
 name: GitHub Pages'e yayınla
+# Site is served by Pages 'deploy from branch' (main /). This workflow is manual-only.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
