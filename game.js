@@ -1,5 +1,5 @@
 // =====================================================================
-//  ÇAKABEY ZİNDANI — Öğretmenler ve Ejderha Buncaişinarasındahayatlaradokunma
+//  ÇAKABEY DUNGEON — Öğretmenler ve Ejderha Buncaişinarasındahayatlaradokunma
 //  Saf HTML5 Canvas + JavaScript. Kurulum gerektirmez; index.html'i açın.
 // =====================================================================
 'use strict';
@@ -317,7 +317,7 @@ const MAPS = [
       if (G.flags.intro0) return;
       G.flags.intro0 = true;
       say([
-        ['narrator', 'Çakabey Okulu. Dönemin son haftası... Ama okulun altındaki kadim Çakabey Zindanı\'ndan korkunç bir kükreme yükseliyor.'],
+        ['narrator', 'Çakabey Okulu. Dönemin son haftası... Ama okulun altındaki kadim Çakabey Dungeon\'dan korkunç bir kükreme yükseliyor.'],
         ['zeynep', 'Hocalarım! Yetişin! Ejderha Buncaişinarasındahayatlaradokunma uyandı!'],
         ['aykutcan', 'Günaydın Zeynep Hocam! Ejderha mı? Harika, tam da sabah sporu lazımdı!'],
         ['zeynep', 'Şaka değil! Okuldaki bütün neşeyi ve öğrencilere ayırdığımız zamanı evrak yığınlarına çeviriyor!'],
@@ -333,7 +333,7 @@ const MAPS = [
     },
   },
   { // ---------------------------------------------------------------- 1
-    title: 'Çakabey Zindanı — 1. Kat: Evrak Koridorları', theme: 'dungeon', floor: '.',
+    title: 'Çakabey Dungeon — 1. Kat: Evrak Koridorları', theme: 'dungeon', floor: '.',
     build() {
       const g = grid(40, 24, '#');
       rect(g, 1, 15, 10, 22, '.'); rect(g, 4, 10, 6, 14, '.'); rect(g, 4, 12, 6, 12, 'B');
@@ -367,7 +367,7 @@ const MAPS = [
     },
   },
   { // ---------------------------------------------------------------- 2
-    title: 'Çakabey Zindanı — 2. Kat: Kasvet Mağarası', theme: 'cave', floor: '.',
+    title: 'Çakabey Dungeon — 2. Kat: Kasvet Mağarası', theme: 'cave', floor: '.',
     build() {
       const g = grid(40, 24, '#');
       rect(g, 1, 17, 12, 22, '.'); rect(g, 5, 11, 7, 16, '.'); rect(g, 5, 13, 7, 13, 'K');
@@ -1212,8 +1212,8 @@ function renderTitle() {
   titleBg();
   drawDragon(ctx, VW / 2, 160, G.t, { s: 0.75, shield: ['blue', 'pink', 'gold'][Math.floor(G.t / 2) % 3] });
   ctx.fillStyle = 'rgba(0,0,0,0.45)'; ctx.fillRect(0, 230, VW, 110);
-  ctx.textAlign = 'center'; ctx.fillStyle = '#000'; ctx.font = 'bold 58px ' + FONT; ctx.fillText('ÇAKABEY ZİNDANI', VW / 2 + 3, 293);
-  ctx.fillStyle = '#ffd34d'; ctx.fillText('ÇAKABEY ZİNDANI', VW / 2, 290);
+  ctx.textAlign = 'center'; ctx.fillStyle = '#000'; ctx.font = 'bold 58px ' + FONT; ctx.fillText('ÇAKABEY DUNGEON', VW / 2 + 3, 293);
+  ctx.fillStyle = '#ffd34d'; ctx.fillText('ÇAKABEY DUNGEON', VW / 2, 290);
   ctx.fillStyle = '#fff'; ctx.font = '18px ' + FONT; ctx.fillText('Üç öğretmen ve ejderha Buncaişinarasındahayatlaradokunma', VW / 2, 322);
   HERO_IDS.forEach((id, i) => {
     const s = SPR[id]; if (!s) return; const x = VW / 2 - 200 + i * 200, y = 360, fi = 1 + Math.floor(G.t * 8) % 4;
@@ -1231,7 +1231,7 @@ function renderEnding() {
   ctx.textAlign = 'center';
   ctx.fillStyle = '#ffd34d'; ctx.font = 'bold 46px ' + FONT; ctx.fillText('SON', VW / 2, 228);
   ctx.fillStyle = '#fff'; ctx.font = '17px ' + FONT;
-  const L = ['Oğuzhan, Şeyda ve Aykutcan Çakabey Zindanı\'ndan neşeyle döndü.', 'Evraklar azaldı, toplantılar kısaldı, ejderha okulun maskotu oldu.',
+  const L = ['Oğuzhan, Şeyda ve Aykutcan Çakabey Dungeon\'dan neşeyle döndü.', 'Evraklar azaldı, toplantılar kısaldı, ejderha okulun maskotu oldu.',
     'Ve öğretmenler bunca işin arasında yeniden... hayatlara dokundu.'];
   L.forEach((l, i) => { ctx.globalAlpha = clamp(t - i * 0.8, 0, 1); ctx.fillText(l, VW / 2, 268 + i * 26); });
   ctx.globalAlpha = clamp(t - 3, 0, 1);

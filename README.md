@@ -1,10 +1,10 @@
-# 🐉 Çakabey Zindanı — Öğretmenler ve Ejderha
+# 🐉 Çakabey Dungeon — Öğretmenler ve Ejderha
 
 ▶️ **Oyna / Play:** https://nsumia.github.io/Cakabey-Dungeon/
 
 Tarayıcıda çalışan, yukarıdan bakışlı (top-down), Türkçe bir hikâye oyunu. Yaklaşık **10–15 dakikada** biter.
 
-Üç öğretmen — **Oğuzhan**, **Şeyda** ve **Aykutcan** — Çakabey Zindanı'na inip ejderha
+Üç öğretmen — **Oğuzhan**, **Şeyda** ve **Aykutcan** — Çakabey Dungeon'a inip ejderha
 **Buncaişinarasındahayatlaradokunma**'yı yenmeye çalışır. Yolda **Tibet** ve **Mert Ata** ile
 savaşır, **Zeynep** ve **Ekin**'den yardım alırlar.
 
@@ -41,7 +41,7 @@ Bulmacalar ve boss kalkanları **karakter değiştirmeyi zorunlu kılar**.
 
 Oyun tamamen statik (HTML + JS + PNG). Kurulum, derleme, paket yok.
 
-1. GitHub'da yeni bir depo oluşturun (ör. `cakabey-zindani`). README eklemeyin, boş olsun.
+1. GitHub'da yeni bir depo oluşturun (ör. `Cakabey-Dungeon`). README eklemeyin, boş olsun.
 2. Bu klasörde:
    ```bash
    git remote add origin https://github.com/nsumia/Cakabey-Dungeon.git
