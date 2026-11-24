@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Çakabey Zindanı — Öğretmenler ve Ejderha</title>
+<style>
+  html,body{margin:0;height:100%;background:#0d0b14;overflow:hidden;font-family:"Segoe UI",Tahoma,Verdana,sans-serif;}
+  #wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;}
+  canvas{background:#000;image-rendering:auto;box-shadow:0 0 40px #000;max-width:100vw;max-height:100vh;}
+  #touch{position:fixed;inset:0;pointer-events:none;display:none;}
+  #touch.on{display:block;}
+  .tb{position:absolute;pointer-events:auto;width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.14);
+      border:2px solid rgba(255,255,255,.35);color:#fff;font-size:15px;font-weight:bold;display:flex;align-items:center;
+      justify-content:center;user-select:none;-webkit-user-select:none;touch-action:none;}
+  .tb:active{background:rgba(255,255,255,.35);}
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="game" width="960" height="624"></canvas></div>
+<div id="touch">
+  <div class="tb" data-a="up"    style="left:76px;bottom:146px">▲</div>
+  <div class="tb" data-a="down"  style="left:76px;bottom:12px">▼</div>
+  <div class="tb" data-a="left"  style="left:8px;bottom:79px">◀</div>
+  <div class="tb" data-a="right" style="left:144px;bottom:79px">▶</div>
+  <div class="tb" data-a="atk"   style="right:90px;bottom:20px;background:rgba(255,90,90,.3)">Saldır</div>
+  <div class="tb" data-a="sp"    style="right:14px;bottom:92px;background:rgba(90,180,255,.3)">Özel</div>
+  <div class="tb" data-a="next"  style="right:14px;bottom:170px;background:rgba(255,220,90,.3)">Değiş</div>
+  <div class="tb" data-a="ok"    style="right:14px;top:14px;width:54px;height:54px">OK</div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
